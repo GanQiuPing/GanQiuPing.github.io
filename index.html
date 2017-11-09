@@ -104,9 +104,77 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/09/hello-world/" data-id="cj9sbv3720001e8pw64f4k74h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/09/hello-world/" data-id="cj9sclokg0004q8pw9tmqqpca" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-SSH免密码登录配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/08/SSH免密码登录配置/" class="article-date">
+  <time datetime="2017-07-08T10:34:40.000Z" itemprop="datePublished">2017-07-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SSH/">SSH</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/08/SSH免密码登录配置/">SSH免密码登录配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="SSH免密码登陆"><a href="#SSH免密码登陆" class="headerlink" title="SSH免密码登陆"></a>SSH免密码登陆</h2><p>每次push代码，都需要输入用户名跟密码，非常的麻烦。因此我们可以配置一个SSH免密码登陆。</p>
+<ul>
+<li><p>github为了账户的安全，需要对每一次push请求都要验证用户的身份，只有合法的用户才可以push</p>
+</li>
+<li><p>使用ssh可以实现免密码操作（不需要使用密码）</p>
+<p>​</p>
+<h2 id="SSH免密码登陆原理"><a href="#SSH免密码登陆原理" class="headerlink" title="SSH免密码登陆原理"></a>SSH免密码登陆原理</h2><p>​</p>
+</li>
+<li><p><img src="images/ssh免登陆.png" alt="ssh免登陆原理"></p>
+</li>
+</ul>
+<h3 id="SSH免密码登录配置"><a href="#SSH免密码登录配置" class="headerlink" title="SSH免密码登录配置"></a>SSH免密码登录配置</h3><ul>
+<li>1 创建SSH Key：<code>ssh-keygen -t rsa 回车 回车 出现方格</code></li>
+<li>2 在文件路径 <code>C:\用户\当前用户名\</code> 找到 <code>.ssh</code> 文件夹</li>
+<li>3 文件夹中有两个文件：<ul>
+<li>私钥：<code>id_rsa</code></li>
+<li>公钥：<code>id_rsa.pub</code></li>
+</ul>
+</li>
+<li>4 在 <code>github -&gt; settings -&gt; SSH and GPG keys</code>页面中，新创建SSH key</li>
+<li>5 粘贴 公钥 <code>id_rsa.pub</code> 内容到对应文本框中</li>
+<li>5 在github中新建仓库或者使用现在仓库，拿到<code>git@github.com:用户名/仓库名.git</code></li>
+<li>6 此后，再次SSH方式与github“通信”，不用输入密码确认身份了</li>
+</ul>
+<p><img src="images/对称加密.jpg" alt="对称加密"></p>
+<p><img src="images/非对称加密.jpg" alt="非对称加密"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/08/SSH免密码登录配置/" data-id="cj9sclojj0000q8pw4w8hla5w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH免密码登录-SSH免密码登录配置-SSH配置详情/">SSH免密码登录 SSH免密码登录配置 SSH配置详情</a></li></ul>
+
     </footer>
   </div>
   
@@ -132,7 +200,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/07/gitKnowledge/">git整套详解教程，请珍惜</a>
+      <a class="article-title" href="/2017/06/07/gitKnowledge/">git葵花宝典</a>
     </h1>
   
 
@@ -292,10 +360,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/06/07/gitKnowledge/" data-id="cj9sbv36u0000e8pwpji7qreu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/06/07/gitKnowledge/" data-id="cj9sclojv0001q8pw5tme052g" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git介绍-git创建版本库-git命令详解-git分支操作及原理/">git介绍 git创建版本库 git命令详解 git分支操作及原理</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git介绍-git创建版本库-git命令详解-git分支操作-git工作原理/">git介绍 git创建版本库 git命令详解 git分支操作 git工作原理</a></li></ul>
 
     </footer>
   </div>
@@ -313,7 +381,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/SSH/">SSH</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a></li></ul>
     </div>
   </div>
 
@@ -323,7 +391,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git介绍-git创建版本库-git命令详解-git分支操作及原理/">git介绍 git创建版本库 git命令详解 git分支操作及原理</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH免密码登录-SSH免密码登录配置-SSH配置详情/">SSH免密码登录 SSH免密码登录配置 SSH配置详情</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git介绍-git创建版本库-git命令详解-git分支操作-git工作原理/">git介绍 git创建版本库 git命令详解 git分支操作 git工作原理</a></li></ul>
     </div>
   </div>
 
@@ -333,7 +401,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/git介绍-git创建版本库-git命令详解-git分支操作及原理/" style="font-size: 10px;">git介绍 git创建版本库 git命令详解 git分支操作及原理</a>
+      <a href="/tags/SSH免密码登录-SSH免密码登录配置-SSH配置详情/" style="font-size: 10px;">SSH免密码登录 SSH免密码登录配置 SSH配置详情</a> <a href="/tags/git介绍-git创建版本库-git命令详解-git分支操作-git工作原理/" style="font-size: 10px;">git介绍 git创建版本库 git命令详解 git分支操作 git工作原理</a>
     </div>
   </div>
 
@@ -342,7 +410,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a></li></ul>
     </div>
   </div>
 
@@ -359,7 +427,11 @@
           </li>
         
           <li>
-            <a href="/2017/06/07/gitKnowledge/">git整套详解教程，请珍惜</a>
+            <a href="/2017/07/08/SSH免密码登录配置/">SSH免密码登录配置</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/07/gitKnowledge/">git葵花宝典</a>
           </li>
         
       </ul>
